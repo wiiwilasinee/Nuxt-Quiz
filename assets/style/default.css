@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
+:root {
+  --color-black: #211210;
+  --color-brown: #5e2d20;
+  --color-orange: #c76b2a;
+  --color-yellow: #f0c260;
+}
+
+body {
+  background: var(--color-yellow);
+  color: var(--color-brown);
+  font: 400 14px/1.8 'Oswald', sans-serif;
+}
+
+input {
+  font-family: 'Oswald', sans-serif;
+}
+
+button {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 30px;
+  margin: 20px 0px;
+  background-color: var(--color-orange);
+  color: var(--color-yellow);
+  border: unset;
+  box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
+  border-radius: 4px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(0.95, 0.95);
+}
+
+a {
+  text-decoration: none;
+}
+
+.slide-enter-active {
+  transition-duration: .8s;
+  transition-timing-function: ease-in;
+}
+
+.slide-leave-active {
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slide-enter-to,
+.slide-leave {
+  transform: translate3d(0, 0, 0);
+  transition: transform .8s;
+}
+
+.slide-leave-to {
+  transform: translate3d(0, -200%, 0);
+  transition: transform .8s;
+}
+
+.slide-enter {
+  transform: translate3d(0, 200%, 0);
+  transition: transform .8s;
+}
