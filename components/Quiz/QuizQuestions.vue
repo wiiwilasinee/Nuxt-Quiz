@@ -70,7 +70,7 @@ export default Vue.extend({
             if(index+1 === this.quiz.questions.length) {
                 return "result";
             } else {
-                return this.quiz.questions[index+1].id;
+                return this.quiz.questions[index+1].id.toString();
             }
         },
         setDisplay(next: String) {
