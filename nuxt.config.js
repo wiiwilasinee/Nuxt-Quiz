@@ -43,13 +43,17 @@ export default {
   ],
 
   axios: {
-    proxy: true
+    proxy: true,
+    headers : {
+      common: {
+        'Accept' : 'application/json'
+      }
+    }
   },
 
   proxy: {
     "/api/": {
       target: "http://localhost:8000/",
-      pathRewrite: { "^/api/": "" }
     }
   },
 

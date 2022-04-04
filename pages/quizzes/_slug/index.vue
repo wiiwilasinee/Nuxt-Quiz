@@ -16,11 +16,13 @@ export default Vue.extend({
     return data.params.slug !== null;
   },
   async asyncData(ctx: Context) {
-    const {data} = await ctx.$axios.get(`/api/quizzes/${ctx.params.slug}/questions`);
-    const quiz = data;
-    
-    return { 
-      quiz
+    try {
+      const request = await ctx.$axios.get(`/api/quizzes/${ctx.params.slug}/questions`);
+      return {
+        quiz: request?.data
+      }
+    } catch(e) {
+      ctx.redirect('/');
     }
   },
   data() {
