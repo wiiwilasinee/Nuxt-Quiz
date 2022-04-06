@@ -12,6 +12,7 @@ body {
   background: var(--color-yellow);
   color: var(--color-brown);
   font: 400 14px/1.8 'Oswald', sans-serif;
+  box-sizing: border-box;
 }
 
 input {
@@ -65,4 +66,40 @@ a {
 .slide-enter {
   transform: translate3d(0, 200%, 0);
   transition: transform .8s;
+}
+
+
+input {
+  width: 100%;
+  font-size: 28px;
+  color: var(--color-brown);
+  background-color: transparent;
+  margin-top: 30px;
+  border: unset;
+  border-bottom: 2px solid var(--color-orange);
+  padding: 20px;
+  outline: none;
+  transition: border-bottom .3s;
+}
+
+input:active,
+input:hover  {
+  border-bottom: 2px solid var(--color-brown);
+  transition: border-bottom .3s;
+
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: var(--color-brown);
+  opacity: 0.6;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--color-brown);
+  opacity: 0.6;
+}
+
+::placeholder {
+  color: var(--color-brown);
+  opacity: 0.6;
 }

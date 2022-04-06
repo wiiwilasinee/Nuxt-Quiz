@@ -1,10 +1,8 @@
 <template>
-  <div>
+  <div class="body-wraper">
     <div class="title-holder">
       <div :class="`question ${showIcon? 'show':''}`"><div>?</div></div>
       <div :class="`title ${showTitle? 'show':''}`">Quiz</div>
-
-      <div class="expaination">Choose one of quiz which you like to participate</div>
     </div>
     <Quizzes/>
   </div>
@@ -33,6 +31,11 @@ export default Vue.extend({
 })
 </script>
 <style scoped>
+  .body-wraper {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 40px;
+  }
   .title-holder {
     position: relative;
     width: 100%;
@@ -76,11 +79,5 @@ export default Vue.extend({
     opacity: .2;
     transform: translate3d(0, -150px, 0);
     transition: transform .4s ease-out, opacity .8s;
-  }
-
-  .expaination {
-    margin-top: 80px;
-    font-family: 'Oswald';
-    font-size: 26px;
   }
 </style>

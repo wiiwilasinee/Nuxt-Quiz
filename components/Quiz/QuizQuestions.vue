@@ -1,6 +1,5 @@
 <template>
     <div class="q-holder">
-        
         <transition name="slide">
         <div class="intro" v-if="display == 'intro'">
             <div class="content">
@@ -116,25 +115,5 @@ export default Vue.extend({
     font-weight: 300;
     color: var(--color-orange);
     margin-bottom: 5px;
-}
-
-.player-info input {
-    width: 100%;
-    font-size: 28px;
-    color: var(--color-brown);
-    background-color: transparent;
-    margin-top: 30px;
-    border: unset;
-    border-bottom: 2px solid var(--color-orange);
-    padding: 20px;
-    outline: none;
-    transition: border-bottom .3s;
-}
-
-.player-info input:active,
-.player-info input:hover  {
-    border-bottom: 2px solid var(--color-brown);
-    transition: border-bottom .3s;
-
 }
 </style>
